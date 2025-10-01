@@ -1,35 +1,20 @@
-<p align=center>
-<br>
-<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
-<a href="#Linux"><img src="https://img.shields.io/badge/os-linux-brightgreen">
-<a href="#MacOS"><img src="https://img.shields.io/badge/os-mac-brightgreen">
-<a href="#Android"><img src="https://img.shields.io/badge/os-android-brightgreen">
-<a href="#Windows"><img src="https://img.shields.io/badge/os-windows-yellowgreen">
-<a href="#iOS"><img src="https://img.shields.io/badge/os-ios-yellow">
-<a href="#Steam-deck"><img src="https://img.shields.io/badge/os-steamdeck-yellow">
-<br>
-<h1 align="center">
-<a href="https://discord.gg/aqu7GpqVmR"><img src="https://invidget.switchblade.xyz/aqu7GpqVmR"></a>
-<a href="matrix.md"><img src="/.assets/matrix-logo.svg" height=110></a>
-<br>
-<a href="https://github.com/port19x"><img src="https://img.shields.io/badge/lead-port19x-lightblue"></a>
-<a href="https://github.com/CoolnsX"><img src="https://img.shields.io/badge/maintainer-CoolnsX-blue"></a>
-<a href="https://github.com/justchokingaround"><img src="https://img.shields.io/badge/maintainer-justchokingaround-blue"></a>
-<a href="https://github.com/Derisis13"><img src="https://img.shields.io/badge/maintainer-Derisis13-blue"></a>
-<a href="https://github.com/71zenith"><img src="https://img.shields.io/badge/maintainer-71zenith-blue"></a>
-<a href="https://github.com/ykhan21"><img src="https://img.shields.io/badge/maintainer-ykhan21-blue"></a>
+Anime in a Podman container!
 
-</p>
+Inside the ```podman``` folder there is a Dockerfile which is ani-cli for Podman.
 
-<h3 align="center">
-A cli to browse and watch anime (alone AND with friends). This tool scrapes the site <a href="https://allmanga.to/">allmanga.</a>
-</h3>
+To build the image:
 
-<h1 align="center">
-	Showcase
-</h1>
+```sudo podman build -t anicli . ```
 
-[ani-cli-demo.webm](https://user-images.githubusercontent.com/44473782/224679247-0856e652-f187-4865-bbcf-5a8e5cf830da.webm)
+To run the image with GPU acceleration:
+
+```sudo xhost + local:podman```
+```sudo podman run -it --rm  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix:Z  --device /dev/dri -e  --net=host anicli```
+
+I got into coding because of ani-cli, I studied until I was able to create this Dockerfile and run it with Podman, so I feel like rediscovering Earth.
+
+Enjoy!
+
 
 ## Table of Contents
 
