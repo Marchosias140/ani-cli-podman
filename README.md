@@ -13,7 +13,7 @@ To run the image with GPU acceleration:
 
 
 
-```sudo podman run --device /dev/snd -it --rm  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix:Z  --device /dev/dri -e  --net=host anicli1``
+```sudo podman run --device /dev/snd -it --rm  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix:Z  --device /dev/dri -e  --net=host anicli1```
 
 I got into coding because of ani-cli, I studied until I was able to create this Dockerfile and run it with Podman, so I feel like rediscovering Earth.
 
