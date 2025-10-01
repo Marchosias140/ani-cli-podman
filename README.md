@@ -1,5 +1,9 @@
 Anime in a Podman container!
 
+Updates:
+
+-Fixed the sound.
+
 Inside the ```podman``` folder there is a Dockerfile which is ani-cli for Podman.
 
 To build the image:
