@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   ani-cli:
-    image: anicli1
+    image: anicli
     container_name: ani-cli
     network_mode: host
     devices:
