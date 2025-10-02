@@ -2,6 +2,7 @@ Anime in a Podman container!
 
 Updates:
 
+-Updated the Dockerfile to include audio-related dependencies.
 -Added docker-compose.yml file which includes all the configuration fixes regarding audio.
 
 Inside the ```podman``` folder there is a Dockerfile which is ani-cli for Podman and its docker-compose.yml file for easier management.
