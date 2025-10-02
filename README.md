@@ -17,6 +17,15 @@ Then:
 
 To run the app inside the container:
 
+
+
+```sudo xhost + local:podman```
+
+
+
+
+
+
 ```sudo podman-compose exec ani-cli bash```
 
 
