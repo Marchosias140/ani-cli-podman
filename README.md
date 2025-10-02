@@ -5,7 +5,7 @@ ________________________________________________________________________________
 Updates:
 
 
--Removed many unnecesary dependencies.
+-Removed many unnecessary dependencies.
 
 
 
