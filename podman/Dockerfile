@@ -2,12 +2,12 @@ FROM ubuntu:latest
 
 WORKDIR /home
 
-RUN mkdir /home/kurumi
+RUN mkdir /home/user
 
-WORKDIR /home/kurumi
+WORKDIR /home/user
 
-RUN apt-get update && apt-get install -y \
-    software-properties-common \
+RUN apt update && apt upgrade -y 
+RUN apt install -y software-properties-common \
     findutils \
     coreutils \
     bash \
@@ -47,10 +47,10 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 RUN git clone "https://github.com/pystardust/ani-cli.git"
-WORKDIR /home/kurumi/ani-cli
+WORKDIR /home/user/ani-cli
 RUN cp ani-cli /usr/bin
 
-WORKDIR /home/kurumi
+WORKDIR /home/user
 
 
 CMD ["/usr/bin/ani-cli"]⏎
