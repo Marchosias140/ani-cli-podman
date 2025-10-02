@@ -4,17 +4,17 @@ ________________________________________________________________________________
 
 Updates:
 
--In process of cleaning up the files and instructions in order to make them more beginner friendly.
 
-
-
--In process of getting rid of unnecesary dependencies in order to make the file smaller.
+-Removed many unnecesary dependencies.
 
 
 
 
 
 -Updated the Dockerfile to include audio-related dependencies.
+
+
+
 
 
 
