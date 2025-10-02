@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  ani-cli:
+    image: anicli1
+    container_name: ani-cli
+    network_mode: host
+    devices:
+      - /dev/snd
+      - /dev/dri
+    environment:
+      - PULSE_SERVER=unix:/run/user/1000/pulse/native
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /run/user/1000/pulse:/run/user/1000/pulse:Z
+      - /dev/shm:/dev/shm:Z
+      - /tmp/.X11-unix:/tmp/.X11-unix:Z
+    stdin_open: true
+    tty: true
+    restart: "no"
