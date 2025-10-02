@@ -18,6 +18,9 @@ Then:
 To run the app inside the container:
 
 ```sudo podman-compose exec ani-cli bash```
+
+
+
 ```ani-cli```
 
 I got into coding because of ani-cli, I studied until I was able to create this Dockerfile and docker-compose.yml and run it them with Podman, so I feel like rediscovering Earth.
