@@ -2,24 +2,25 @@ Anime in a Podman container!
 
 Updates:
 
+-Added podman-compose file.
 -Fixed the sound.
 
-Inside the ```podman``` folder there is a Dockerfile which is ani-cli for Podman.
+Inside the ```podman``` folder there is a Dockerfile which is ani-cli for Podman and its docker-compose.yml file for easier management.
 
 To build the image:
 
-```sudo podman build -t anicli . ```
+```sudo podman build -t anilci . ```
 
-To run the image with GPU acceleration:
+Then:
 
-```sudo xhost + local:podman``` 
+```sudo podman compose up -d ```
 
+To run the app inside the container:
 
+```sudo podman-compose exec ani-cli bash```
+```ani-cli```
 
-
-```sudo podman run --device /dev/snd -it --rm  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix:Z  --device /dev/dri -e  --net=host anicli1```
-
-I got into coding because of ani-cli, I studied until I was able to create this Dockerfile and run it with Podman, so I feel like rediscovering Earth.
+I got into coding because of ani-cli, I studied until I was able to create this Dockerfile and docker-compose.yml and run it them with Podman, so I feel like rediscovering Earth.
 
 Enjoy!
 
