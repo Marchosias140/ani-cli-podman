@@ -2,9 +2,9 @@ FROM ubuntu:latest
 
 WORKDIR /home
 
-RUN mkdir /home/user
+RUN mkdir /home/kurumi
 
-WORKDIR /home/user
+WORKDIR /home/kurumi
 
 RUN apt-get update && apt-get install -y \
     software-properties-common \
@@ -26,7 +26,10 @@ RUN apt-get update && apt-get install -y \
     libgl1-mesa-dri \
     at-spi2-core \
     dbus-x11 \
+    alsa-utils \
     adwaita-icon-theme \
+    libpulse0 \
+    pulseaudio-utils \
     fonts-dejavu \
     libwebkitgtk-6.0-4 \
     libnotify4 \
@@ -44,8 +47,10 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 RUN git clone "https://github.com/pystardust/ani-cli.git"
-WORKDIR /home/user/ani-cli
+WORKDIR /home/kurumi/ani-cli
 RUN cp ani-cli /usr/bin
 
+WORKDIR /home/kurumi
 
-CMD ["/usr/bin/ani-cli"]
+
+CMD ["/usr/bin/ani-cli"]⏎
